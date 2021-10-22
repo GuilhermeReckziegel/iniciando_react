@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Tasks from './components/Tasks';
-import "./App.css";
+import "./components/css/App.css";
+import AddTask from './components/AddTask';
 
 const App = () => {
   // let message = 'Me livrei da maldição !!'; //variavel comum
@@ -21,6 +22,7 @@ const App = () => {
   return (
     <>
       <div className="container">
+        <AddTask />
         <Tasks tasks={tasks} />
       </div>
       

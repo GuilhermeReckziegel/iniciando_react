@@ -1,5 +1,5 @@
 import React from 'react';
-import "./itemTask.css";
+import "./css/itemTask.css";
 
 const item_task = ({item_task}) => {
     return <div className="task-container">{item_task.title}</div>;

@@ -1,9 +1,12 @@
 import React from 'react';
-
-const AddTaks = () => {
+import "./css/AddTask.css";
+const AddTask = () => {
     return ( 
-        <input type="text"/>
+    <div className="add-task-container">
+        <input className="add-task-input" type="text"/>
+    </div>
+        
      );
 }
  
-export default AddTaks;
+export default AddTask;
