@@ -1,15 +1,29 @@
 import React, {useState} from 'react'
-
+import Tasks from './components/Tasks';
 import "./App.css";
 
 const App = () => {
-  // let message = 'Me livrei da maldição !!';
-  const [message, setMessage] = useState('Me livrei da maldição !!');
+  // let message = 'Me livrei da maldição !!'; //variavel comum
+  const [tasks, setTasks] = useState([
+    {
+      id: '1',
+      title: 'Estudar Programação',
+      completed: false,
+    },
+
+    {
+      id: '2',
+      title: 'Ler Livros',
+      completed: true,
+    }
+  ]); //variavel state - Atualiza o componente
 
   return (
     <>
-      <div className="container">{message}</div>
-      <button onClick={() => setMessage("Hello World !!")}>mudar</button>
+      <div className="container">
+        <Tasks tasks={tasks} />
+      </div>
+      
     </>
   );
      
