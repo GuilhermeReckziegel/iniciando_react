@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
 
-function App() {
+import "./App.css";
+
+const App = () => {
+  // let message = 'Me livrei da maldição !!';
+  const [message, setMessage] = useState('Me livrei da maldição !!');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">{message}</div>
+      <button onClick={() => setMessage("Hello World !!")}>mudar</button>
+    </>
   );
+     
 }
 
 export default App;
